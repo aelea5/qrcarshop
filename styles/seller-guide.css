@@ -1,0 +1,816 @@
+/* Seller Guide Styles */
+:root {
+    --guide-primary: #2563eb;
+    --guide-success: #10b981;
+    --guide-warning: #f59e0b;
+    --guide-danger: #ef4444;
+    --guide-info: #06b6d4;
+    --guide-purple: #8b5cf6;
+    --guide-gray-50: #f9fafb;
+    --guide-gray-100: #f3f4f6;
+    --guide-gray-200: #e5e7eb;
+    --guide-gray-300: #d1d5db;
+    --guide-gray-600: #4b5563;
+    --guide-gray-700: #374151;
+    --guide-gray-800: #1f2937;
+    --guide-gray-900: #111827;
+}
+
+/* Hero Section */
+.guide-hero {
+    background: linear-gradient(135deg, var(--guide-primary) 0%, var(--guide-purple) 100%);
+    background-image: 
+        linear-gradient(135deg, rgba(37, 100, 235, 0.384) 0%, rgba(138, 92, 246, 0.377) 100%),
+        url('../img/pennyxhart.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+    position: relative;
+}
+
+.guide-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../img/pennyxhart.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: blur(2px);
+    z-index: -1;
+}
+
+.guide-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.75) 0%, rgba(139, 92, 246, 0.75) 100%);
+    z-index: 0;
+}
+
+.guide-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.guide-hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.stat-label {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* Guide Navigation */
+.guide-nav {
+    background: white;
+    padding: 2rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.nav-tab {
+    background: var(--guide-gray-100);
+    border: 1px solid var(--guide-gray-200);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: var(--guide-gray-700);
+}
+
+.nav-tab:hover {
+    background: var(--guide-gray-200);
+    transform: translateY(-2px);
+}
+
+.nav-tab.active {
+    background: var(--guide-primary);
+    color: white;
+    border-color: var(--guide-primary);
+}
+
+/* Guide Sections */
+.guide-section {
+    display: none;
+    padding: 4rem 0;
+}
+
+.guide-section.active {
+    display: block;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--guide-gray-900);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.section-header p {
+    font-size: 1.25rem;
+    color: var(--guide-gray-600);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Guide Grid */
+.guide-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.guide-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border: 1px solid var(--guide-gray-200);
+    transition: all 0.3s ease;
+}
+
+.guide-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.guide-card.full-width {
+    grid-column: 1 / -1;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.card-header i {
+    font-size: 2rem;
+}
+
+.card-header h3 {
+    font-size: 1.5rem;
+    color: var(--guide-gray-900);
+    margin: 0;
+}
+
+/* Do/Don't Lists */
+.do-dont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.do, .dont {
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.do {
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.dont {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.do h4, .dont h4 {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.do ul, .dont ul {
+    list-style: none;
+    padding: 0;
+}
+
+.do li, .dont li {
+    margin-bottom: 0.5rem;
+    padding-left: 0;
+}
+
+/* Photo Checklist */
+.photo-checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.checklist-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--guide-gray-50);
+    border-radius: 8px;
+    border-left: 4px solid var(--guide-success);
+}
+
+.checklist-item i {
+    color: var(--guide-success);
+    font-size: 1.2rem;
+}
+
+/* Tips List */
+.tips-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.tip {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--guide-gray-50);
+    border-radius: 12px;
+}
+
+.tip i {
+    color: var(--guide-primary);
+    font-size: 1.5rem;
+    margin-top: 0.25rem;
+}
+
+.tip h4 {
+    margin-bottom: 0.5rem;
+    color: var(--guide-gray-900);
+}
+
+.tip p {
+    color: var(--guide-gray-600);
+    margin: 0;
+}
+
+/* Description Template */
+.template-structure {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.template-section {
+    padding: 2rem;
+    border-radius: 12px;
+    background: var(--guide-gray-50);
+}
+
+.template-section h4 {
+    color: var(--guide-primary);
+    margin-bottom: 1rem;
+}
+
+.example {
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.example.good {
+    background: rgba(16, 185, 129, 0.1);
+    border-left: 4px solid var(--guide-success);
+}
+
+.example.bad {
+    background: rgba(239, 68, 68, 0.1);
+    border-left: 4px solid var(--guide-danger);
+}
+
+/* Lists Styling */
+.do-list, .dont-list {
+    list-style: none;
+    padding: 0;
+}
+
+.do-list li, .dont-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+}
+
+.do-list li {
+    background: rgba(16, 185, 129, 0.05);
+}
+
+.dont-list li {
+    background: rgba(239, 68, 68, 0.05);
+}
+
+.do-list i {
+    color: var(--guide-success);
+}
+
+.dont-list i {
+    color: var(--guide-danger);
+}
+
+/* Power Words */
+.power-words {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.word-category h4 {
+    margin-bottom: 1rem;
+    color: var(--guide-gray-900);
+}
+
+.word-tag {
+    display: inline-block;
+    background: var(--guide-primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    margin: 0.25rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Research Steps */
+.research-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.step {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.step-number {
+    background: var(--guide-primary);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.step-content h4 {
+    margin-bottom: 0.75rem;
+    color: var(--guide-gray-900);
+}
+
+.step-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.step-content li {
+    padding: 0.25rem 0;
+    color: var(--guide-gray-600);
+}
+
+/* Pricing Strategy */
+.pricing-strategy {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.strategy {
+    padding: 2rem;
+    border-radius: 12px;
+    background: var(--guide-gray-50);
+    border-left: 4px solid var(--guide-primary);
+}
+
+.strategy h4 {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.pros-cons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.pros, .cons {
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.pros {
+    background: rgba(16, 185, 129, 0.1);
+}
+
+.cons {
+    background: rgba(239, 68, 68, 0.1);
+}
+
+/* Timing Guide */
+.timing-guide {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.timing-item {
+    padding: 2rem;
+    border-radius: 12px;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.timing-item.best {
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.timing-item.avoid {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.timing-item i {
+    font-size: 2rem;
+    margin-top: 0.25rem;
+}
+
+.timing-item.best i {
+    color: var(--guide-success);
+}
+
+.timing-item.avoid i {
+    color: var(--guide-danger);
+}
+
+.timing-item h4 {
+    margin-bottom: 1rem;
+    color: var(--guide-gray-900);
+}
+
+.timing-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.timing-item li {
+    padding: 0.5rem 0;
+    color: var(--guide-gray-700);
+}
+
+/* Psychology Tips */
+.psychology-tips {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Color Utilities */
+.text-success { color: var(--guide-success); }
+.text-warning { color: var(--guide-warning); }
+.text-danger { color: var(--guide-danger); }
+.text-info { color: var(--guide-info); }
+.text-purple { color: var(--guide-purple); }
+.text-primary { color: var(--guide-primary); }
+
+/* Condition Assessment */
+.condition-assessment {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.warning-box {
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.warning-box i {
+    color: var(--guide-warning);
+    font-size: 2rem;
+    margin-top: 0.25rem;
+}
+
+.warning-box h3 {
+    color: var(--guide-gray-900);
+    margin-bottom: 0.5rem;
+}
+
+/* Condition Grid */
+.condition-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.condition-category {
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid;
+}
+
+.condition-category.excellent {
+    background: rgba(16, 185, 129, 0.05);
+    border-color: var(--guide-success);
+}
+
+.condition-category.good {
+    background: rgba(245, 158, 11, 0.05);
+    border-color: var(--guide-warning);
+}
+
+.condition-category.fair {
+    background: rgba(239, 68, 68, 0.05);
+    border-color: var(--guide-danger);
+}
+
+.condition-category h4 {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.condition-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.condition-category li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+    color: var(--guide-gray-700);
+}
+
+.checklist-section {
+    margin-bottom: 4rem;
+}
+
+.checklist-section h3 {
+    font-size: 2rem;
+    color: var(--guide-gray-900);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Improvement Tips */
+.improvement-tips {
+    margin-top: 4rem;
+}
+
+.improvement-tips h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--guide-gray-900);
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.improvement-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.improvement-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border: 1px solid var(--guide-gray-200);
+}
+
+.improvement-card .card-header {
+    margin-bottom: 1.5rem;
+}
+
+.improvement-card h4 {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.improvement-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.improvement-card li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--guide-gray-100);
+    color: var(--guide-gray-700);
+}
+
+.improvement-card li:last-child {
+    border-bottom: none;
+}
+
+.investment-guide {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.investment-rule {
+    padding: 1.5rem;
+    background: var(--guide-gray-50);
+    border-radius: 8px;
+    border-left: 4px solid var(--guide-info);
+}
+
+.investment-rule h5 {
+    color: var(--guide-gray-900);
+    margin-bottom: 0.5rem;
+}
+
+.investment-rule p {
+    color: var(--guide-gray-600);
+    margin: 0;
+}
+
+/* Header Navigation */
+.header-nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: var(--guide-gray-700);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.header-nav a:hover,
+.header-nav a.active {
+    background: var(--guide-primary);
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .guide-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-stats {
+        gap: 2rem;
+    }
+    
+    .nav-tabs {
+        gap: 0.5rem;
+    }
+    
+    .nav-tab {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .guide-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .do-dont {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .pros-cons {
+        grid-template-columns: 1fr;
+    }
+    
+    .condition-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .improvement-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .header-nav {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .guide-hero {
+        padding: 2rem 0;
+    }
+    
+    .section-header h2 {
+        font-size: 1.75rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .nav-tab {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.25rem;
+        padding: 1rem 0.5rem;
+    }
+    
+    .step {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .timing-item,
+    .warning-box {
+        flex-direction: column;
+        text-align: center;
+    }
+}
