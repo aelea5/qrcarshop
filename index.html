@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRCarShop.com - Sell Your Car Smarter with QR Codes</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="img/logo.png" alt="QRCarShop" class="logo-img">
+                    <span class="tagline-header">Create. Display. Sell. The new way to sell used cars.</span>
+                </div>
+                <button class="auth-btn" onclick="location.href='auth.html'" id="authButton">
+                    <i class="fas fa-user"></i>
+                    <span>Log in / Sign up</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="container">
+            <h1 class="search-title">Sell Your Car Smarter with QR Codes</h1>
+            <p class="search-subtitle">Turn your For Sale sign into a professional listing that buyers can scan for complete details</p>
+            <p class="tagline-mobile">Create. Display. Sell. The new way to sell used cars.</p>
+
+            <div class="cta-buttons">
+                <button class="primary-cta-btn" onclick="location.href='create-listing.html'">
+                    <i class="fas fa-qrcode"></i>
+                    Create Your Listing
+                </button>
+                <button class="secondary-cta-btn" onclick="location.href='#how-it-works'">
+                    <i class="fas fa-play-circle"></i>
+                    How It Works
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works-section">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">Get your car sold in 3 simple steps</p>
+            
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <h3 class="step-title">Create Your Listing</h3>
+                    <p class="step-description">Our guided form walks you through each step with photo tips and prompts to help you create a complete, professional listing in minutes</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <h3 class="step-title">Download & Print Your Materials</h3>
+                    <p class="step-description">Choose what works best for you: QR code only, QR code with vehicle summary, or a complete full-page advertisement for maximum impact</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="step-title">Get Serious Buyers</h3>
+                    <p class="step-description">Buyers scan for instant access to all details, photos, and contact information</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose QR Car Shop?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="benefit-title">Stand Out from Paper Signs</h3>
+                    <p class="benefit-description">Your QR code immediately signals organization and tech-savviness to buyers</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <h3 class="benefit-title">No More Phone Tag</h3>
+                    <p class="benefit-description">Buyers get all details instantly without calling to ask basic questions</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="benefit-title">Serious Inquiries Only</h3>
+                    <p class="benefit-description">People who take time to scan codes are genuinely interested, not just curious</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="benefit-title">Stop Repeating Yourself</h3>
+                    <p class="benefit-description">No more answering the same basic questions from every caller</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Browse Vehicles Section -->
+    <section class="browse-section">
+        <div class="container">
+            <h2 class="section-title">Browse Available Vehicles</h2>
+            <p class="section-subtitle">See what others are selling with QR codes</p>
+            
+            <form class="search-form">
+                <div class="search-grid">
+                    <div class="search-field">
+                        <label for="make">Make</label>
+                        <select id="make" name="make">
+                            <option value="">Any Make</option>
+                            <option value="toyota">Toyota</option>
+                            <option value="honda">Honda</option>
+                            <option value="ford">Ford</option>
+                            <option value="chevrolet">Chevrolet</option>
+                            <option value="nissan">Nissan</option>
+                            <option value="bmw">BMW</option>
+                            <option value="mercedes">Mercedes-Benz</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </div>
+                    
+                    <div class="search-field">
+                        <label for="model">Model</label>
+                        <select id="model" name="model">
+                            <option value="">Any Model</option>
+                        </select>
+                    </div>
+                    
+                    <div class="search-field">
+                        <label for="year">Year</label>
+                        <select id="year" name="year">
+                            <option value="">Any Year</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                        </select>
+                    </div>
+                    
+                    <div class="search-field price-field">
+                        <label for="price-range">Price Range</label>
+                        <div class="price-inputs">
+                            <input type="number" id="min-price" placeholder="Min Price" min="0">
+                            <span class="price-separator">-</span>
+                            <input type="number" id="max-price" placeholder="Max Price" min="0">
+                        </div>
+                    </div>
+
+                    <div class="search-field location-field">
+                        <label for="location">Location</label>
+                        <div class="location-input-group">
+                            <input type="text" id="location" name="location" placeholder="City, State or Zip Code">
+                            <button type="button" class="location-btn" id="use-location-btn">
+                                <i class="fas fa-crosshairs"></i>
+                            </button>
+                        </div>
+                        <div class="radius-control">
+                            <label for="search-radius" class="radius-label">Search within:</label>
+                            <select id="search-radius" name="search-radius" class="radius-select">
+                                <option value="25">25 miles</option>
+                                <option value="50" selected>50 miles</option>
+                                <option value="100">100 miles</option>
+                                <option value="200">200 miles</option>
+                                <option value="nationwide">Nationwide</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="search-btn">
+                    <i class="fas fa-search"></i>
+                    Browse Cars
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Featured/Example Vehicles -->
+    <section class="featured-section">
+        <div class="container">
+            <h2 class="section-title">Example QR Listings</h2>
+            <p class="section-subtitle">See how professional your listing can look</p>
+            
+            <div class="vehicles-grid">
+                <div class="vehicle-card">
+                    <div class="vehicle-image">
+                        <img src="https://via.placeholder.com/300x200/4169E1/ffffff?text=2023+Honda+Accord" alt="2023 Honda Accord">
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-title">2023 Honda Accord</h3>
+                        <p class="vehicle-details">
+                            <span class="mileage">15,420 miles</span> • 
+                            <span class="location">Los Angeles, CA</span>
+                        </p>
+                        <div class="vehicle-features">
+                            <span class="feature">Automatic</span>
+                            <span class="feature">Sedan</span>
+                            <span class="feature">4 doors</span>
+                        </div>
+                        <div class="vehicle-price">$28,995</div>
+                    </div>
+                </div>
+
+                <div class="vehicle-card">
+                    <div class="vehicle-image">
+                        <img src="https://via.placeholder.com/300x200/4169E1/ffffff?text=2022+Toyota+Camry" alt="2022 Toyota Camry">
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-title">2022 Toyota Camry</h3>
+                        <p class="vehicle-details">
+                            <span class="mileage">22,100 miles</span> • 
+                            <span class="location">Dallas, TX</span>
+                        </p>
+                        <div class="vehicle-features">
+                            <span class="feature">Automatic</span>
+                            <span class="feature">Sedan</span>
+                            <span class="feature">Hybrid</span>
+                        </div>
+                        <div class="vehicle-price">$26,500</div>
+                    </div>
+                </div>
+
+                <div class="vehicle-card">
+                    <div class="vehicle-image">
+                        <img src="https://via.placeholder.com/300x200/4169E1/ffffff?text=2023+Ford+Explorer" alt="2023 Ford Explorer">
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-title">2023 Ford Explorer</h3>
+                        <p class="vehicle-details">
+                            <span class="mileage">8,750 miles</span> • 
+                            <span class="location">Miami, FL</span>
+                        </p>
+                        <div class="vehicle-features">
+                            <span class="feature">AWD</span>
+                            <span class="feature">SUV</span>
+                            <span class="feature">7 seats</span>
+                        </div>
+                        <div class="vehicle-price">$35,900</div>
+                    </div>
+                </div>
+
+                <div class="vehicle-card">
+                    <div class="vehicle-image">
+                        <img src="https://via.placeholder.com/300x200/4169E1/ffffff?text=2021+BMW+X5" alt="2021 BMW X5">
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-title">2021 BMW X5</h3>
+                        <p class="vehicle-details">
+                            <span class="mileage">31,200 miles</span> • 
+                            <span class="location">New York, NY</span>
+                        </p>
+                        <div class="vehicle-features">
+                            <span class="feature">AWD</span>
+                            <span class="feature">Luxury</span>
+                            <span class="feature">Premium</span>
+                        </div>
+                        <div class="vehicle-price">$42,750</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="img/logo.png" alt="QRCarShop" class="footer-logo-img">
+                </div>
+                <p class="footer-text">Sell your car smarter with QR codes</p>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">About</a>
+                    <a href="#" class="footer-link">Contact</a>
+                    <a href="#" class="footer-link">Privacy</a>
+                    <a href="#" class="footer-link">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
